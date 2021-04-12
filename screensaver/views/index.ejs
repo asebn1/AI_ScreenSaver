@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="/stylesheets/main.css" />
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <!-- <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p> -->
+    <section class="banner full">
+      <article>
+        <img src="images/unknown.png" alt="" />
+        <div class="inner">
+          <header>
+            <p>protect your screen from unauthorized personnel</p>
+            <h2>AI Screensaver</h2>
+          </header>
+        </div>
+      </article>
+      
+    </section>
+
+    <section id="one" class="wrapper style2">
+      <div class="inner">
+        <div class="grid-style">
+
+          <div>
+            <div class="box">
+              <div class="image fit">
+                <img src="images/person_add.png" alt="" />
+              </div>
+              <div class="content">
+                <header class="align-center">
+                  <p>add user to AWS Rekognition FaceCollection</p>
+                  <h2>Add User</h2>
+                </header>
+                
+                <footer class="align-center">
+                  <form action=/register method="post">
+                    <input type="file" id="image_path" name="image" accept="image/png, image/jpeg" class="button alt">
+                    
+                    <input type="text" id="image_id" name="text" value="사진 이름""><input type="submit" value="등록" class="button alt" onclick="register_alert()">
+                  </form>
+                </footer>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="box">
+              <div class="image fit">
+                <img src="images/play.png" alt="" />
+              </div>
+              <div class="content">
+                <header class="align-center">
+                  <p>Detect Personnel and analyze</p>
+                  <h2>Run Detection</h2>
+                </header>
+                <footer class="align-center">
+                  <form action="/use" method="post">
+                    <input type="hidden" name="landing" id="landing" value="true" />
+                    <label for="type">Choose a type:</label>
+                    <select name="type" id="type"  class="button alt">
+                      <option value="Desktop">바탕화면</option>
+                      <option value="Logout">로그아웃</option>
+                      <option value="NewDesktop">화면전환</option>
+                    </select>
+                    
+                    <input type="submit" value="시작" class="button alt">
+                    </form>
+                </footer>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <script src="javascripts/jquery.min.js"></script>
+			<script src="javascripts/jquery.scrollex.min.js"></script>
+			<script src="javascripts/skel.min.js"></script>
+			<script src="javascripts/util.js"></script>
+			<script src="javascripts/main.js"></script>
+  </body>
+</html>
